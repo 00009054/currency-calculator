@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="p-5">
+  
+  <div class="container text-dark">
+    <h1 class="h3 mb-4">Currency Converter</h1>
+
+    <form class="calculate-form w-50 mx-auto bg-light p-5" action="https://echo.htmlacademy.ru" method="POST">
+
+      <div class="form-group-wrapper row">
+        <div class="form-group col-7">
+          <label class="d-none" for="money-input">Enter the Value:</label>
+          <input class="form-control money-input" type="number" id="money-input" name="money" placeholder="1" required>
+        </div>
+  
+       <div class="form-group col-5">
+        <label class="d-none" for="currency-input">Currency</label>
+        <select class="currency-input form-control" name="currency" id="currency-input" required>
+          <option value="" disabled>Select the currency</option>
+          <option value="10359" selected>USD</option>
+          <option value="12285">EUR</option>
+          <option value="136">RUB</option>
+          <option value="13509">GBP</option>
+          <option value="1549">CNY</option>
+        </select>
+       </div>
+      </div>
+
+      <div class="result-wrapper d-none alert alert-success">
+        <output class="result" for="money-input currency-input"></output> 
+        UZS
+      </div>
+  
+      <button class="btn btn-success btn-block" type="submit">Convert</button>
+    </form>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
